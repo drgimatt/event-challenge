@@ -23,6 +23,7 @@ contract Bank {
         emit Withdraw(msg.sender, _amount);
     }
 
+
     function transfer(address _to, uint _amount) public {
         require(_amount > 0, "Transfer amount must be greater than 0");
         require(balances[msg.sender] >= _amount, "Insufficient balance");
